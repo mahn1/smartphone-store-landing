@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIXELFON — новые смартфоны с гарантией и доставкой за 2 часа</title>
+  <meta name="description" content="Оригинальные смартфоны с официальной гарантией. Оплата частями без переплаты, trade-in, доставка по городу за 2 часа.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">Доставка по городу за 2 часа · Оплата частями 0% · Гарантия 12 месяцев</div>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="#" class="logo">PIXEL<span>FON</span></a>
+    <nav class="nav" id="nav">
+      <a href="#catalog">Каталог</a>
+      <a href="#installment">Рассрочка</a>
+      <a href="#tradein">Trade-in</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a href="tel:+79000000000" class="header__phone">+7 (900) 000-00-00</a>
+    <button class="cart-btn" id="cart-btn" aria-label="Корзина">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 2H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+      <span class="cart-btn__count" id="cart-count">0</span>
+    </button>
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- Первый экран -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="badge">Новинки осени уже в наличии</span>
+        <h1>Новый смартфон сегодня — <span>платите частями</span></h1>
+        <p class="hero__lead">Только оригинальная техника с официальной гарантией. Проверяем при вас, переносим данные со старого телефона и принимаем его в зачёт.</p>
+        <div class="hero__actions">
+          <a href="#catalog" class="btn">Выбрать смартфон</a>
+          <a href="#tradein" class="btn btn--light">Оценить мой телефон</a>
+        </div>
+        <ul class="hero__perks">
+          <li><b>0%</b> переплаты в рассрочку</li>
+          <li><b>2 часа</b> доставка по городу</li>
+          <li><b>12 мес.</b> гарантия магазина</li>
+        </ul>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__circle"></div>
+        <div class="phone phone--back"><div class="phone__screen s-blue"></div></div>
+        <div class="phone phone--front"><div class="phone__screen s-sunset"><div class="phone__island"></div><div class="phone__time">12:30</div></div></div>
+        <div class="float-card float-card--a"><b>−15 000 ₽</b><span>за старый телефон</span></div>
+        <div class="float-card float-card--b"><b>от 3 333 ₽/мес</b><span>без переплаты</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Каталог -->
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title">Каталог</h2>
+        <div class="controls">
+          <div class="chips" id="brand-filter">
+            <button class="chip is-active" data-brand="all">Все</button>
+            <button class="chip" data-brand="Apple">Apple</button>
+            <button class="chip" data-brand="Samsung">Samsung</button>
+            <button class="chip" data-brand="Xiaomi">Xiaomi</button>
+            <button class="chip" data-brand="HONOR">HONOR</button>
+          </div>
+          <select class="sort" id="sort" aria-label="Сортировка">
+            <option value="popular">Сначала популярные</option>
+            <option value="cheap">Сначала дешевле</option>
+            <option value="expensive">Сначала дороже</option>
+          </select>
+        </div>
+      </div>
+      <div class="products" id="products"></div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="section section--white">
+    <div class="container">
+      <h2 class="section__title">Почему покупают у нас</h2>
+      <div class="features">
+        <div class="feature"><div class="feature__icon">🛡️</div><h3>Только оригинал</h3><p>Техника от официальных дистрибьюторов. Проверяем IMEI при вас.</p></div>
+        <div class="feature"><div class="feature__icon">🚚</div><h3>Доставка за 2 часа</h3><p>Курьер привезёт в любую точку города. Оплата после проверки.</p></div>
+        <div class="feature"><div class="feature__icon">🔄</div><h3>Перенос данных</h3><p>Бесплатно переносим контакты, фото и мессенджеры со старого телефона.</p></div>
+        <div class="feature"><div class="feature__icon">🧾</div><h3>Гарантия 12 месяцев</h3><p>Если что-то сломается — заберём в сервис и выдадим подменный телефон.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Рассрочка -->
+  <section class="section" id="installment">
+    <div class="container calc">
+      <div class="calc__text">
+        <h2 class="section__title">Рассчитайте рассрочку</h2>
+        <p>Без первого взноса и без переплаты: цена в рассрочку такая же, как при оплате сразу. Решение банка — за 5 минут по паспорту.</p>
+      </div>
+      <div class="calc__box">
+        <label class="calc__label">Стоимость смартфона <output id="price-out">80 000 ₽</output></label>
+        <input type="range" id="price" min="15000" max="200000" step="1000" value="80000">
+        <div class="calc__label">Срок</div>
+        <div class="segmented" id="months">
+          <button data-months="3">3 мес.</button>
+          <button data-months="6" class="is-active">6 мес.</button>
+          <button data-months="12">12 мес.</button>
+          <button data-months="24">24 мес.</button>
+        </div>
+        <div class="calc__result">
+          <span>Ежемесячный платёж</span>
+          <b id="monthly">13 334 ₽</b>
+          <small id="overpay">Переплата: 0 ₽</small>
+        </div>
+        <a href="#catalog" class="btn btn--full">Выбрать смартфон</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trade-in -->
+  <section class="section section--dark" id="tradein">
+    <div class="container calc">
+      <div class="calc__text">
+        <h2 class="section__title">Trade-in: старый телефон в зачёт</h2>
+        <p>Оценим ваш смартфон за 10 минут и сразу вычтем сумму из стоимости нового. Работает для любого состояния — даже с разбитым экраном.</p>
+      </div>
+      <form class="calc__box calc__box--dark" id="tradein-form">
+        <label class="calc__label">Бренд
+          <select name="brand">
+            <option value="1">Apple</option>
+            <option value="0.75">Samsung</option>
+            <option value="0.6">Xiaomi</option>
+            <option value="0.55">HONOR</option>
+            <option value="0.45">Другой</option>
+          </select>
+        </label>
+        <label class="calc__label">Год покупки
+          <select name="year">
+            <option value="1">2025–2026</option>
+            <option value="0.7">2023–2024</option>
+            <option value="0.4">2021–2022</option>
+            <option value="0.2">Раньше</option>
+          </select>
+        </label>
+        <div class="calc__label">Состояние</div>
+        <div class="segmented" id="condition">
+          <button type="button" data-k="1" class="is-active">Как новый</button>
+          <button type="button" data-k="0.8">Есть царапины</button>
+          <button type="button" data-k="0.45">Разбит</button>
+        </div>
+        <div class="calc__result">
+          <span>Предварительная оценка</span>
+          <b id="tradein-sum">до 45 000 ₽</b>
+          <small>Точную сумму назовём после осмотра</small>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Доставка -->
+  <section class="section section--white" id="delivery">
+    <div class="container">
+      <h2 class="section__title">Доставка и оплата</h2>
+      <div class="delivery">
+        <div class="delivery__item"><span class="delivery__num">1</span><h3>Оформляете заказ</h3><p>На сайте или по телефону. Менеджер перезвонит за 10 минут.</p></div>
+        <div class="delivery__item"><span class="delivery__num">2</span><h3>Курьер едет к вам</h3><p>По городу — 2 часа и бесплатно от 30 000 ₽. По России — 1–3 дня через СДЭК.</p></div>
+        <div class="delivery__item"><span class="delivery__num">3</span><h3>Проверяете и платите</h3><p>Наличными, картой, по QR-коду или частями. Отказаться можно на месте.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Вопросы -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <h2 class="section__title">Частые вопросы</h2>
+      <details class="faq" open><summary>Это оригинальные телефоны?</summary><p>Да. Мы работаем с официальными дистрибьюторами, на каждый телефон выдаём чек и гарантийный талон. IMEI можно проверить при получении.</p></details>
+      <details class="faq"><summary>Что, если телефон не подойдёт?</summary><p>Вернём деньги в течение 14 дней, если телефон в идеальном состоянии и сохранена комплектация.</p></details>
+      <details class="faq"><summary>Как работает рассрочка?</summary><p>Оформляем через банк-партнёр по паспорту. Магазин компенсирует проценты, поэтому вы платите ровно цену телефона.</p></details>
+      <details class="faq"><summary>Можно забрать самому?</summary><p>Да, в шоуруме в центре города. Резерв держим 24 часа.</p></details>
+    </div>
+  </section>
+
+  <!-- Подбор -->
+  <section class="section">
+    <div class="container lead">
+      <div>
+        <h2 class="section__title">Не знаете, что выбрать?</h2>
+        <p>Расскажите, для чего нужен телефон и на какой бюджет рассчитываете — подберём 2–3 варианта и пришлём сравнение в мессенджер.</p>
+      </div>
+      <form class="lead__form" id="lead-form" novalidate>
+        <input name="name" type="text" placeholder="Ваше имя" required>
+        <input name="phone" type="tel" placeholder="+7 (___) ___-__-__" required>
+        <select name="budget">
+          <option>Бюджет до 30 000 ₽</option>
+          <option>30 000 – 60 000 ₽</option>
+          <option>60 000 – 100 000 ₽</option>
+          <option>Больше 100 000 ₽</option>
+        </select>
+        <button class="btn" type="submit">Подобрать</button>
+        <p class="lead__ok" hidden>Спасибо! Перезвоним в течение 10 минут.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#" class="logo">PIXEL<span>FON</span></a>
+    <p>Демо-лендинг для портфолио. Магазин и контакты вымышлены, цены условные.</p>
+    <p>© 2026</p>
+  </div>
+</footer>
+
+<!-- Корзина -->
+<aside class="cart" id="cart" aria-hidden="true">
+  <div class="cart__panel">
+    <div class="cart__head"><h3>Корзина</h3><button class="cart__close" id="cart-close" aria-label="Закрыть">✕</button></div>
+    <ul class="cart__list" id="cart-list"></ul>
+    <div class="cart__foot">
+      <div class="cart__total"><span>Итого</span><b id="cart-total">0 ₽</b></div>
+      <button class="btn btn--full" id="checkout">Оформить заказ</button>
+    </div>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
